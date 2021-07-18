@@ -4,10 +4,9 @@ import com.escola.core.disciplina.api.dto.CriarDisciplinaDTO;
 import com.escola.core.disciplina.application.DisciplinaApplicationService;
 import com.escola.core.disciplina.application.commands.CriarDisciplinaCommand;
 import com.escola.core.disciplina.domain.model.Disciplina;
-import com.escola.core.disciplina.exception.TMSCriarDisciplinaConstraintException;
+import com.escola.core.disciplina.exception.CriarDisciplinaConstraintException;
 import com.escola.core.model.PessoaId;
 import com.escola.util.ValidateService;
-import com.escola.core.disciplina.domain.model.DisciplinaId;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -40,7 +39,7 @@ public class DisciplinaController {
     public ResponseEntity<Void> criar(@RequestBody CriarDisciplinaDTO dto) {
 
         validator.validate(dto).ifPresent(violations -> {
-            throw new TMSCriarDisciplinaConstraintException(violations);
+            throw new CriarDisciplinaConstraintException(violations);
         });
 
         var cmd = CriarDisciplinaCommand.of(

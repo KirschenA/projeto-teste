@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 @Service
 @AllArgsConstructor
 public class TurmaApplicationService {
-    private final TurmaDomainRepository turmaDomainRepository;
+//    private final TurmaDomainRepository turmaDomainRepository;
 
     public Turma handle(final CriarTurmaCommand cmd) {
         var turma = Turma.builder()

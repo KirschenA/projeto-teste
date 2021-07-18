@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @AllArgsConstructor
 public class AlunoApplicationService {
 
-    private final AlunoDomainRepository alunoDomainRepository;
+//    private final AlunoDomainRepository alunoDomainRepository;
 
     public Aluno handle(final CriarAlunoCommand cmd) {
 

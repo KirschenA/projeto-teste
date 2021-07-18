@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 @Service
 @AllArgsConstructor
 public class DisciplinaApplicationService {
-    private final DisciplinaDomainRepository disciplinaDomainRepository;
+//    private final DisciplinaDomainRepository disciplinaDomainRepository;
 
     public Disciplina handle(final CriarDisciplinaCommand cmd) {
 

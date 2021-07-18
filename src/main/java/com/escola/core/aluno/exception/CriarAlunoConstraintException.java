@@ -10,7 +10,7 @@ import java.util.Set;
 public class CriarAlunoConstraintException extends ConstraintViolationException {
 
 
-    private static final long serialVersionUID = -2102612226881012373L;
+    private static final long serialVersionUID = 7927953991751530655L;
 
     public CriarAlunoConstraintException(Set<? extends ConstraintViolation<?>> constraintViolations) {
         super(constraintViolations);

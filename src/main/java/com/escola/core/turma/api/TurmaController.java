@@ -6,7 +6,7 @@ import com.escola.core.turma.api.dto.CriarTurmaDTO;
 import com.escola.core.turma.application.TurmaApplicationService;
 import com.escola.core.turma.application.commands.CriarTurmaCommand;
 import com.escola.core.turma.domain.model.Turma;
-import com.escola.core.turma.exception.TMSCriarTurmaConstraintException;
+import com.escola.core.turma.exception.CriarTurmaConstraintException;
 import com.escola.util.ValidateService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -39,7 +39,7 @@ public class TurmaController {
     public ResponseEntity<Void> criar(@RequestBody CriarTurmaDTO dto) {
 
         validator.validate(dto).ifPresent(violations -> {
-            throw new TMSCriarTurmaConstraintException(violations);
+            throw new CriarTurmaConstraintException(violations);
         });
 
         var cmd = CriarTurmaCommand.builder()

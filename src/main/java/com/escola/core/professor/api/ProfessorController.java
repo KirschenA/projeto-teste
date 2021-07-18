@@ -3,9 +3,8 @@ package com.escola.core.professor.api;
 import com.escola.core.professor.application.ProfessorApplicationService;
 import com.escola.core.professor.application.commands.CriarProfessorCommand;
 import com.escola.core.professor.domain.model.Professor;
-import com.escola.core.professor.exception.TMSCriarProfessorConstraintException;
+import com.escola.core.professor.exception.CriarProfessorConstraintException;
 import com.escola.util.ValidateService;
-import com.escola.core.model.PessoaId;
 import com.escola.core.professor.api.dto.CriarProfessorDTO;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -35,7 +34,7 @@ public class ProfessorController {
     public ResponseEntity<Void> criar(@RequestBody CriarProfessorDTO dto) {
 
         validator.validate(dto).ifPresent(violations -> {
-            throw new TMSCriarProfessorConstraintException(violations);
+            throw new CriarProfessorConstraintException(violations);
         });
 
         var cmd = CriarProfessorCommand.of(

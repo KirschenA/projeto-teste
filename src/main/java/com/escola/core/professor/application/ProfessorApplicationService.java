@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @AllArgsConstructor
 public class ProfessorApplicationService {
 
-    private final ProfessorDomainRepository repository;
+//    private final ProfessorDomainRepository repository;
 
     public Professor handle(final CriarProfessorCommand cmd) {
         var professor = Professor.builder().id(PessoaId.generate())
