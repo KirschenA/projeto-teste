@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.escola.disciplina.domain.model.DisciplinaTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.276 s - in com.escola.disciplina.domain.model.DisciplinaTest
